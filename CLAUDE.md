@@ -70,6 +70,16 @@ python scripts/train.py --export models/outputs/.../best.pt --export-format onnx
 - Violation records saved to `inference/results/violations.yaml` with timestamps and bounding boxes
 - Default model output: `models/outputs/urban_governance_yolov8n/weights/best.pt`
 
+### Environment Setup
+
+- Use conda to manage Python environment
+- Create environment with Python 3.10+:
+  ```bash
+  conda create -n urban-governance python=3.10
+  conda activate urban-governance
+  pip install -r requirements.txt
+  ```
+
 ### Dependencies
 
 Core: `ultralytics`, `torch`, `opencv-python`, `pyyaml`
