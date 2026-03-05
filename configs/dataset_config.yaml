@@ -1,0 +1,24 @@
+# 城市治理问题检测数据集配置
+# 用于 YOLOv8 训练
+
+# 数据集根目录
+path: ../data/urban_violations
+
+# 训练集/验证集/测试集路径
+train: images/train
+val: images/val
+test: images/test
+
+# 类别定义
+names:
+  0: illegal_parking      # 违章停车
+  1: street_vendor        # 占道经营
+  2: illegal_stall        # 违规摊位
+  3: blocked_passage      # 堵塞通道
+  4: illegal_advertisement  # 违规广告
+  5: garbage_dumping      # 乱倒垃圾
+  6: damaged_facility     # 设施损坏
+
+# 数据集统计信息 (填充用)
+# nc: 7  # 类别数量
+# nb: 0  # 图像数量

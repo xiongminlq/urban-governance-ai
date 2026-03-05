@@ -1,0 +1,50 @@
+# YOLOv8 训练配置
+
+# 模型设置
+model: yolov8n.pt    # 预训练模型：yolov8n/s/m/l/x
+# model: yolov8s.pt  # 更高精度
+
+# 训练参数
+epochs: 100
+batch: 16
+imgsz: 640          # 输入图像尺寸
+patience: 50        # 早停耐心值
+save: true
+save_period: -1     # 每 N 个 epoch 保存一次 (-1 仅保存最佳)
+
+# 优化器
+optimizer: SGD
+lr0: 0.01           # 初始学习率
+lrf: 0.1            # 最终学习率 (lr0 * lrf)
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3
+warmup_momentum: 0.8
+
+# 数据增强
+hsv_h: 0.015        # HSV-H 增强
+hsv_s: 0.7          # HSV-S 增强
+hsv_v: 0.4          # HSV-V 增强
+degrees: 0.0        # 旋转角度
+translate: 0.1      # 平移
+scale: 0.5          # 缩放
+shear: 0.0          # 剪切
+perspective: 0.0    # 透视
+flipud: 0.0         # 上下翻转概率
+fliplr: 0.5         # 左右翻转概率
+mosaic: 1.0         # Mosaic 增强概率
+mixup: 0.0          # MixUp 增强概率
+copy_paste: 0.0     # Copy-Paste 增强概率
+
+# 设备设置
+device: 0           # GPU 设备 ID，cpu 或 multi
+workers: 8          # 数据加载线程数
+amp: true           # 自动混合精度
+
+# 其他
+project: ../models/outputs
+name: urban_governance_yolov8n
+exist_ok: false
+verbose: true
+seed: 42
+deterministic: true
