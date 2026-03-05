@@ -37,6 +37,8 @@ inference/results/
 data/*/images/*
 data/*/labels/*
 !data/.gitkeep
+!data/*/images/.gitkeep
+!data/*/labels/.gitkeep
 
 # 配置文件
 *.env
